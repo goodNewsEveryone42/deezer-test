@@ -1,0 +1,26 @@
+.music-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+  margin-bottom: 5%;
+  width: 30%;
+  min-height: 150px;
+  background-color: rgb(94, 92, 92);
+  border: 1px solid #000000;
+}
+
+.music-item__info-container {
+  display: flex;
+}
+
+.music-item__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  width: 100px;
+  height: 40px;
+  color: #ffffff;
+  background-color: rgb(194, 193, 193);
+  border-radius: 15px;
+}

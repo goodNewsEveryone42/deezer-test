@@ -1,0 +1,15 @@
+.main-page {
+  display: flex;
+  margin-top: 2%;
+}
+
+.main-page__tab {
+  display: block;
+  margin-left: 10%;
+}
+
+.main-page__tabs {
+  display: flex;
+  flex-direction: column;
+  width: 165px;
+}

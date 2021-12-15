@@ -1,0 +1,13 @@
+.music-list {
+  width: 80%;
+}
+
+.music-list__cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.music-item__info-card {
+  margin-top: 2%;
+  margin-left: 4%;
+}
