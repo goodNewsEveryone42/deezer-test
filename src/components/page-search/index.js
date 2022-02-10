@@ -1,3 +1,3 @@
-import PageSearch from "./PageSearch.tsx";
+import PageSearch from "./PageSearch.jsx";
 
 export default PageSearch;

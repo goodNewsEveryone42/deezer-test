@@ -3,10 +3,12 @@ import { Link, Switch, Route } from "react-router-dom";
 import MusicList from "../music";
 import PageSearch from "../page-search";
 import MusicService from "../../service/music";
+import { useSelector } from "react-redux";
 
 import "./Main.css";
 
 const MainPage = () => {
+  const cards = useSelector(state => state.list);
   const [musicChart, setMusic] = useState(null);
 
   const musicService = new MusicService();

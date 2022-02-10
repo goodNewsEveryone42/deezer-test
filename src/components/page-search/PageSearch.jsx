@@ -10,7 +10,7 @@ const PageSearch = () => {
 
   const musicService = new MusicService();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e) => {
     e.preventDefault();
     const query = e.target.value;
     musicService.searchMusic(query).then((res) => setMusic(res));
