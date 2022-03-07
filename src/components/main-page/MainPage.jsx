@@ -2,20 +2,17 @@ import React,  { useState, useEffect } from 'react';
 import { Link, Switch, Route } from "react-router-dom";
 import MusicList from "../music";
 import PageSearch from "../page-search";
-import MusicService from "../../service/music";
-import { useSelector } from "react-redux";
+import { shallowEqual, useSelector, useDispatch } from "react-redux";
 
 import "./Main.css";
 
 const MainPage = () => {
+  const dispatch = useDispatch();
   const cards = useSelector(state => state.list);
-  const [musicChart, setMusic] = useState(null);
-
-  const musicService = new MusicService();
 
   useEffect(() => {
-    musicService.getResource().then((res) => setMusic(res));
-  }, []);
+    dispatch({ type: "FETCH_TOP_MUSIC_ASYNC" });
+  }, [dispatch]);
 
   return (
     <div className="main-page">
@@ -32,7 +29,7 @@ const MainPage = () => {
         </Link>
       </div>
       <Switch>
-        <Route exact path="/" render={()=><MusicList musicChart={musicChart}/> }/>
+        <Route exact path="/" render={()=><MusicList musicChart={cards}/> }/>
         <Route path="/search" component={PageSearch} />
       </Switch>
     </div>
